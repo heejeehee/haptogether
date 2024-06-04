@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* 전체 감싸기 */
+    .findIdWrap {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    /* 아이디 찾기 */
+    .findIdHeader {
+        text-align: center;
+        margin: 10px 0px 20px 0px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    /* 버튼이랑 인풋 공통 */
+    button {
+        background-color: #5495d7;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        /* transition-duration: 0.4s; */
+        cursor: pointer;
+        border-radius: 8px;
+    }
+
+    button:hover {
+        background-color: #297bc8;
+    }
+
+    button:active {
+        background-color: #a7c9e0;
+        outline: none;
+    }
+
+    input {
+        border: 1px solid #dadada;
+        width: 50%;
+        height: 40px;
+        margin: 5px 0px;
+        padding: 2px;
+    }
+
+    /* 인증번호 발송 구간 일렬정렬 */
+    .for_align {
+        display: flex;
+    }
+
+    #sendNumber {
+        margin-left: 6px;
+    }
+
+    /* 문의하기 구간 */
+    .findIdBtnWrap {
+        text-align: center;
+        margin-top: 50px;
+        border-top: 1px solid #dadada;
+    }
+
+    #inquireBtn {
+        background-color: #8fe07f;
+        margin-top: 10px;
+    }
+
+    #inquireBtn:hover {
+        background-color: #69e94f;
+    }
+
+    #inquireBtn:active {
+        background-color: #a9ee9b;
+    }
+
+    /* 각 질문유형 */
+    .findIdTxt,
+    .getNumberTxt {
+        font-size: 18px;
+    }
+</style>
+<script>
+    // 인증번호 발송 이메일 검증
+    window.addEventListener("load", function() {
+        // 인증번호 발송 버튼 클릭 이벤트
+        document.querySelector("#sendNumber").addEventListener("click", function() {
+            let email = document.querySelector("input[type='email']")
+            // @ 없을경우
+            if(email.value.indexOf("@") === -1) {
+                document.querySelector(".sendNumAlarm").textContent = "올바른 이메일 형식이 아닙니다."
+                return;
+            }
+            // @ 가 2개 이상일 경우, 앞뒤로 글씨도 있어야 함
+            // console.log(email.value.split("@").length)
+            if(email.value.split("@").length !== 2 || email.value.split("@")[0].length < 1 || email.value.split("@")[1].length < 1) {
+                document.querySelector(".sendNumAlarm").textContent = "올바른 이메일 형식이 아닙니다."
+                return;
+            }
+            // @로 나눴을 때 뒤에 "." 이 있어야 함. 앞뒤로 글씨도 있어야 함
+            // console.log(email.value.split("@")[1])
+            // console.log(email.value.split("@")[1].split("."))
+            // console.log(email.value.split("@")[1].split(".").length===2)
+            if(email.value.split("@")[1].split(".").length !== 2 || email.value.split("@")[0].split(".")[0].length < 1 || email.value.split("@")[1].split(".")[1].length < 1) {
+                document.querySelector(".sendNumAlarm").textContent = "올바른 이메일 형식이 아닙니다."
+                return;
+            }
+
+            // 모든 경우 통과 시
+            document.querySelector(".sendNumAlarm").textContent = "발송완료." 
+        })
+    })
+</script>
+<body>
+    <div class="findIdWrap">
+        <div class="findIdHeader">
+            아이디 찾기
+        </div>
+
+        <div class="findIdDetail">
+            <div class="findIdTxt">
+                가입 당시 입력한 이메일을 입력하세요.
+            </div>
+            <div class="for_align">
+                <input type="email"> <button type="button" id="sendNumber">인증번호 발송</button>
+            </div>
+            <div class="sendNumAlarm">
+                
+            </div>
+
+            <br>
+
+            <div class="getNumberTxt">
+                인증번호를 입력하세요.
+            </div>
+            <div>
+                <input type="text"> <button type="button">인증하기</button>
+            </div>
+        </div>
+
+        <div class="findIdBtnWrap">
+            <div>아이디를 찾을 수 없다면?</div>
+            <button type="button" id="inquireBtn">문의하기</button>
+        </div>
+
+    </div>
+</body>
+
+</html>

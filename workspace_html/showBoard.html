@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* 헤더 */
+    .showBoardHeader {
+        margin: 10px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    /* 모집공고 전체 */
+    .boardWrap {
+        border: 1px solid red;
+        margin: 20px 0px;
+    }
+
+    /* 모집공고 제목 */
+    .boardName {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    /* rolesWrap 역할 구간 */
+    .rolesWrap {
+        border: 1px solid black;
+    }
+
+    /* btnWrap 버튼div */
+    .btnWrap {
+        margin: 10px 0px;
+    }
+    /* button */
+    .btnWrap button {
+        width: 100%;
+        height: 40px;
+    }
+</style>
+<body>
+    <div class="showBoardHeader">
+        모집공고
+    </div>
+    <div class="boardWrap">
+        <div class="boardName">
+            제목이 나오는 구간입니다.
+        </div>
+        <div class="boardDetail">
+            내용이 나오는 구간입니다.<br>
+            글쓰기의 인풋상자에 들어간 내용을 받습니다.
+        </div>
+    </div>
+    <div class="rolesWrap">
+        <span>※ 역할</span>
+        <div>
+            <input type="checkbox"> 1번역할(역할이 들어갈 구간)
+        </div>
+    </div>
+
+    <div class="btnWrap">
+        <button type="button">신청하기</button>
+    </div>
+</body>
+</html>

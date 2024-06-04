@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* 상단 점수 부분 */
+    .profileDetail {
+        border: 1px solid red;
+        padding: 20px 10px;
+    }
+
+    /* 상 하단 여백 */
+    .profileDetail > div {
+        margin: 5px 0px;
+    }
+    .myScore > div {
+        margin: 5px 0px;
+    }
+
+    /* 점수 부분 정렬 */
+    .myScore > div > div {
+        display: inline-block;
+    }
+    /* 점수 외부 바 */
+    .postitiveBarOuter,
+    .negetiveBarOuter {
+        width: 60%;
+        height: 10px;
+        border: 1px solid red;
+        border-radius: 10px;
+    }
+    /* 점수 내부 바 */
+    .postitiveBarInner,
+    .negetiveBarInner {
+        width: 10%; /* 이것만 조정하면 될듯 */
+        height: 100%;
+        border-radius: 10px;
+        box-sizing: border-box;
+        background-color: black;
+        /* 나중에 분리하기 */
+    }
+
+    /* 하단 메뉴 부분 */
+    .profileMenu {
+        border: 1px solid red;
+        padding: 20px 10px;
+    }
+
+    /* 메뉴 각각 */
+    .profileMenu div {
+        margin: 10px 5px;
+    }
+    .profileMenu div:hover {
+        font-weight: bold;
+    }
+</style>
+<script>
+    // 그래프 숫자값 이용해서 조정하기
+    window.addEventListener("load", function() {
+        // console.log(document.querySelector(".positivePercent").textContent)
+        document.querySelector(".postitiveBarInner").style.cssText = "width: " + document.querySelector(".positivePercent").textContent + ";"
+        document.querySelector(".negetiveBarInner").style.cssText = "width: " + document.querySelector(".negetivePercent").textContent + ";"
+    })
+</script>
+<body>
+    <div class="profileWrap">
+        <div class="profileDetail">
+            <div class="profileDetailHeader">
+                내 평가점수
+            </div>
+            <div style="margin-top: 15px;">
+                진행중인 프로젝트 : 1
+            </div>
+            <div>
+                완료한 프로젝트 : 1
+            </div>
+            <div class="myScore" style="margin-top: 15px;">
+                <div>
+                    <div> 긍정점수 </div>
+                    <div class="postitiveBarOuter"> 
+                        <div class="postitiveBarInner"> </div> 
+                    </div> 
+                    <div class="positivePercent"> 50% </div>
+                </div>
+                <div>
+                    <div> 부정점수 </div> 
+                    <div class="negetiveBarOuter"> 
+                        <div class="negetiveBarInner"> </div> 
+                    </div> 
+                    <div class="negetivePercent"> 0% </div>
+                </div>
+            </div>
+        </div>
+        <div class="profileMenu">
+            <div>
+                프로젝트 신청현황
+            </div>
+            <div>
+                내가 쓴 공고
+            </div>
+            <div>
+                진행중인 프로젝트
+            </div>
+            <div>
+                중단한 프로젝트
+            </div>
+            <div>
+                완료한 프로젝트
+            </div>
+            <div>
+                내가 쓴 평가
+            </div>
+            <div>
+                내가 받은 평가
+            </div>
+            <div>
+                문의하기
+            </div>
+            <div>
+                신고하기
+            </div>
+        </div>
+    </div>
+</body>
+</html>

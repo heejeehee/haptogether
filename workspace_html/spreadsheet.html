@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    숫자입력 : <input type="number"><button type="button">출력</button>
+    <div class="output"></div>
+
+    <script>
+        
+        let input = document.querySelector("input[type='number']");
+        let output = document.querySelector(".output");
+        
+        document.querySelector("button[type='button']").addEventListener("click", function() {            
+            let words = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+
+            // if(input.value === 0 || input.value <= 0) {
+            //     output.textContent = "계산불가";
+            // }
+            // if(input.value > 0 && input.value <= words.length) {
+            //     let calc = input.value % 26
+            //     console.log(calc-1)
+            //     output.textContent = words[calc-1];
+            // }
+            // if(input.value > words.length + (2 - 1) && input.value <= words.length * 2) {
+            //     let calc = input.value % 26
+            //     console.log(calc-1)
+            //     output.textContent = words[0] + words[calc-1];
+            // }
+            // if(input.value > words.length * (3 - 1) && input.value <= words.length * 3) {
+            //     let calc = input.value % 26
+            //     console.log(calc-1)
+            //     output.textContent = words[1] + words[calc-1];
+            // }
+            // if(input.value > words.length * (4 - 1) && input.value <= words.length * 4) {
+            //     let calc = input.value % 26
+            //     console.log(calc-1)
+            //     output.textContent = words[2] + words[calc-1];
+            // }
+            // if(input.value > words.length * (5 - 1) && input.value <= words.length * 5) {
+            //     let calc = input.value % 26
+            //     console.log(calc-1)
+            //     output.textContent = words[3] + words[calc-1];
+            // }
+            // if(input.value > words.length * (6 - 1) && input.value <= words.length * 6) {
+            //     let calc = input.value % 26
+            //     console.log(calc-1)
+            //     output.textContent = words[4] + words[calc-1];
+            // }
+            // 이게 아닌것같다...
+
+            // console.log(calc(1000))
+            output.textContent = "";    // 반복해서 사용할 경우 계속 쌓이는거 방지
+            calc(input.value);
+
+            function calc(number) {
+                // let count = 0;   // 돌아가는 횟수(체크용)
+                let remain = 0;     // 나머지값 필드에 올려두기
+                let makeWord = []   // 문자로 변환 후 담을 배열
+                // console.log(words[(number % 26)-1])     // 출력(체크용)
+                if(number <= 26) {   // 26보다 작은수를 입력하면 안돌아가서 넣음.
+                    makeWord.push(words[(number % 26)-1])   // 처음단어
+                } else {    // 26보다 클경우
+                    makeWord.push(words[(number % 26)-1])   // 처음단어
+                    while(number > 26) {
+                        number = number / 26    // 처음단어 나누기 26
+                        remain = number % 26    // 그 수의 나머지가 words배열 인덱스
+                        // console.log(words[Math.floor(remain)-1]) // 출력(체크용)
+                        makeWord.push(words[Math.floor(remain)-1])  // 배열에 담기
+                        // count++;
+                    }
+                }
+
+                console.log(makeWord)   // 원하는 단어가 거꾸로 담겨있음.
+                for(i=makeWord.length-1; i >= 0; i--) {
+                    output.textContent += makeWord[i]
+                }
+            }
+
+
+        })
+
+
+    </script>
+</body>
+</html>
