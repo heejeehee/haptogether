@@ -42,10 +42,10 @@
                 <a href="/haptogether/profile/pageto/projectWrited">내가 쓴 공고</a>
             </div>
             <div>
-                진행중인 프로젝트
+                <a href="/haptogether/profile/pageto/doingProject">진행중인 프로젝트</a>
             </div>
             <div>
-                중단한 프로젝트
+                <a href="/haptogether/profile/pageto/stopProject">중단한 프로젝트</a>
             </div>
             <div>
                 완료한 프로젝트

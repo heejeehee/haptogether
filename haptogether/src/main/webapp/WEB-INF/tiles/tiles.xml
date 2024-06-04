@@ -14,62 +14,92 @@
  
  	<!-- 로그인 페이지 -->
 	<definition name="login" extends="baseLayout">
+		<put-attribute name="title" value="로그인" />
 		<put-attribute name="content" value="/WEB-INF/views/loginPage/loginPage.jsp" />
 	</definition>
 	
 	<!-- 로그인-회원가입 페이지 -->
 	<definition name="signUp" extends="baseLayout">
+		<put-attribute name="title" value="회원가입" />
 		<put-attribute name="content" value="/WEB-INF/views/loginPage/signUp.jsp" />
 	</definition>
 	
 	<!-- 로그인-아이디 찾기 페이지 -->
 	<definition name="findId" extends="baseLayout">
+		<put-attribute name="title" value="아이디 찾기" />
 		<put-attribute name="content" value="/WEB-INF/views/loginPage/findId.jsp" />
 	</definition>
 	
 	<!-- 로그인-비밀번호 찾기 페이지 -->
 	<definition name="findPw" extends="baseLayout">
+		<put-attribute name="title" value="비밀번호 찾기" />
 		<put-attribute name="content" value="/WEB-INF/views/loginPage/findPw.jsp" />
 	</definition>
 	
 	<!-- 메인 페이지 -->
 	<definition name="main" extends="baseLayout">
+		<put-attribute name="title" value="메인" />
 		<put-attribute name="content" value="/WEB-INF/views/mainPage/mainPage.jsp" />
 	</definition>
 	
 	<!-- 메인-검색 페이지 -->
 	<definition name="search" extends="baseLayout">
+		<put-attribute name="title" value="검색" />
 		<put-attribute name="content" value="/WEB-INF/views/mainPage/searchPage.jsp" />
 	</definition>
 	
 	<!-- 메인-좋아요 리스트 페이지 -->
 	<definition name="loveList" extends="baseLayout">
+		<put-attribute name="title" value="좋아요 리스트" />
 		<put-attribute name="content" value="/WEB-INF/views/mainPage/loveList.jsp" />
 	</definition>
 	
 	<!-- 메인-모집공고 작성 페이지 -->
 	<definition name="writeBoard" extends="baseLayout">
+		<put-attribute name="title" value="모집공고 작성" />
 		<put-attribute name="content" value="/WEB-INF/views/mainPage/writeBoard.jsp" />
 	</definition>
 	
 	<!-- 메인-모집공고 보기 페이지 -->
 	<definition name="showBoard" extends="baseLayout">
+		<put-attribute name="title" value="모집공고 보기" />
 		<put-attribute name="content" value="/WEB-INF/views/mainPage/showBoard.jsp" />
 	</definition>
 	
 	<!-- 프로필 페이지 -->
 	<definition name="myProfile" extends="baseLayout">
+		<put-attribute name="title" value="내 프로필" />
 		<put-attribute name="content" value="/WEB-INF/views/profilePage/myProfile.jsp" />
 	</definition>
 	
 	<!-- 프로필-프로젝트 신청현황 페이지 -->
 	<definition name="paStatus" extends="baseLayout">
+		<put-attribute name="title" value="프로젝트 신청현황" />
 		<put-attribute name="content" value="/WEB-INF/views/profilePage/projectApplicationStatus.jsp" />
 	</definition>
 	
 	<!-- 프로필-내가 쓴 공고 페이지 -->
 	<definition name="projectWrited" extends="baseLayout">
+		<put-attribute name="title" value="내가 쓴 공고" />
 		<put-attribute name="content" value="/WEB-INF/views/profilePage/projectWrited.jsp" />
+	</definition>
+	
+	<!-- 프로필-내가 쓴 공고 상세보기 페이지 -->
+	<definition name="projectWritedDetail" extends="baseLayout">
+		<put-attribute name="title" value="내가 쓴 공고 상세보기" />
+		<put-attribute name="content" value="/WEB-INF/views/profilePage/projectWritedDetail.jsp" />
+	</definition>
+	
+	<!-- 프로필-진행중인 프로젝트 페이지 -->
+	<definition name="doingProject" extends="baseLayout">
+		<put-attribute name="title" value="진행중인 프로젝트" />
+		<put-attribute name="content" value="/WEB-INF/views/profilePage/doingProject.jsp" />
+	</definition>
+	
+	<!-- 프로필-진행중인 프로젝트 페이지 -->
+	<definition name="stopProject" extends="baseLayout">
+		<put-attribute name="title" value="중단한 프로젝트" />
+		<put-attribute name="content" value="/WEB-INF/views/profilePage/stopProject.jsp" />
 	</definition>
 	
 	

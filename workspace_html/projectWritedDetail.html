@@ -11,7 +11,8 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        padding: 0px 15px;
+        box-sizing: border-box;
     }
 
     .detailHeader {
@@ -23,7 +24,119 @@
     }
 
     /* 프로젝트 정보 구간 */
-    
+    .projectWrap {
+        margin-bottom: 25px;
+    }
+    .projectName {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .projectInfo {
+        padding: 0px 5px;
+    }
+
+    /* 역할 구간 */
+    .roleWrap {
+        margin-bottom: 25px;
+        background-color: #eeeeee;
+        padding: 10px 7px;
+    }
+    .roleName {
+        margin-bottom: 10px;
+    }
+    .applicationPeopleList {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    button {
+        border: 1px solid #c3c3c3;
+        color: #fff;
+        border-radius: 5px;
+        padding: 5px 10px;
+    }
+    .btnWrap {
+        display: flex;
+    }
+
+    .btnProfile {
+        background-color: #0d198b;
+    }
+    .btnProfile:hover {
+        background-color: #081055;
+    }
+    .btnProfile:active {
+        background-color: #97a0f0;
+    }
+
+    .btnAccept {
+        background-color: #1981f8;
+    }
+    .btnAccept:hover {
+        background-color: #0b5db9;;
+    }
+    .btnAccept:active {
+        background-color: #78b7ff;
+    }
+
+    /* 작성된 댓글 구간 */
+    .cmtWrap {
+        margin-bottom: 15px;
+        background-color: #eeeeee;
+        padding: 10px 7px;
+    }
+    .cmtNameAndDetail {
+        margin-bottom: 15px;
+        border-bottom: 1px solid #aaaaaa;
+    }
+    .txtInfo {
+        margin-bottom: 5px;
+    }
+
+    /* 글 등록하기 */
+    .writeCmt {
+        display: flex;
+        margin-bottom: 35px;
+        height: 60px;
+    }
+
+    textarea {
+        width: 80%;
+        margin-right: 5px;
+    }
+
+    .btnWrite {
+        width: 20%;
+        background-color: #871eff;
+        color: #ffffff;
+        border: 1px solid #ccc;
+    }
+    .btnWrite:hover {
+        background-color: #4b128d;
+    }
+    .btnWrite:active {
+        background-color: #ae6ef8;
+    }
+
+    /* 공고마감 */
+    .btnEnd {
+        width: 100%;
+        border-radius: 0;
+        border: 1px solid #c3c3c3;
+        background-color: #ed4141;
+        color: #fff;
+    }
+
+    .btnEnd:hover {
+        background-color: #e43333;
+    }
+
+    .btnEnd:active {
+        background-color: #f48c8c;
+    }
 </style>
 
 <body>
@@ -40,21 +153,16 @@
             </div>
         </div>
         <div class="roleWrap">
-            <div class="roleNameAndHeadcount">
-                <div class="roleName">
-                    작성할때 정했던 역할 이름
-                </div>
-                <div class="roleHeadcount">
-                    신청한 사람이 몇명인지(자바스크립트로 처리)
-                </div>
+            <div class="roleName">
+                작성할때 정했던 역할 이름
             </div>
             <div class="applicationPeopleList">
                 <div class="applicationPersonName">
                     사람이름
                 </div>
                 <div class="btnWrap">
-                    <button type="button">프로필</button>
-                    <button type="button">모집</button>
+                    <button type="button" class="btnProfile">프로필</button>
+                    <button type="button" class="btnAccept">모집</button>
                 </div>
             </div>
         </div>
@@ -72,9 +180,10 @@
             <textarea placeholder="내용을 입력해주세요.">
 
             </textarea>
+            <button type="button" class="btnWrite">등록</button>
         </div>
         <div>
-            <button type="button">마감하기</button>
+            <button type="button" class="btnEnd">마감하기</button>
         </div>
     </div>
 </body>

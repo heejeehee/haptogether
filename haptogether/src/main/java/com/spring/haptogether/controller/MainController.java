@@ -77,4 +77,22 @@ public class MainController {
 	public String projectWritedPage() {
 		return "projectWrited";
 	}
+	
+	// 프로필 페이지 - 내가 쓴 공고
+	@RequestMapping("/profile/pageto/projectWritedDetail")
+	public String projectWritedDetailPage() {
+		return "projectWritedDetail";
+	}
+	
+	// 프로필 페이지 - 진행중인 프로젝트
+	@RequestMapping("/profile/pageto/doingProject")
+	public String doingProjectPage() {
+		return "doingProject";
+	}
+	
+	// 프로필 페이지 - 중단한 프로젝트
+	@RequestMapping("/profile/pageto/stopProject")
+	public String stopProjectPage() {
+		return "stopProject";
+	}
 }
