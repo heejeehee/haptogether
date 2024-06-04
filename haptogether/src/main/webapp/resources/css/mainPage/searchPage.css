@@ -1,0 +1,21 @@
+/* 하나를 더 감싸서 아래 리스트 식으로 정렬 */
+.forFlex {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+/* 검색창&버튼 */
+.searchBox {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+}
+.searchBox input[type="text"] {
+    width: 90%;
+    height: 88%;
+}
+.searchBox button[type="button"] {
+    width: 10%;
+    height: 100%;
+}

@@ -1,0 +1,39 @@
+/* header 헤더 */
+header {
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+    /* 상단고정 */
+    width: 100%;
+    position: fixed;
+    top:0px;
+    box-sizing: border-box; /* 박스 안쪽으로 크기 고정 */
+    
+    z-index: 10;
+}
+.main_home {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid red;
+}
+.main_back {
+    display: none;
+    width: 30px;
+    height: 30px;
+    border: 1px solid red;
+}
+.main_logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.main_profile {
+	width: 30px;
+    height: 30px;
+    border: 1px solid red;
+}
+header a {
+    text-decoration-line: none;
+}

@@ -1,0 +1,44 @@
+/* 하나를 더 감싸서 아래 리스트 식으로 정렬 */
+.forFlex {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-top: 10px;
+}
+
+
+/* 헤더 */
+.showBoardHeader {
+	text-align: center;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 모집공고 전체 */
+.boardWrap {
+    border: 1px solid red;
+    margin: 20px 0px;
+}
+
+/* 모집공고 제목 */
+.boardName {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* rolesWrap 역할 구간 */
+.rolesWrap {
+    border: 1px solid black;
+    height: 300px;
+}
+
+/* btnWrap 버튼div */
+.btnWrap {
+    margin: 10px 0px;
+}
+/* button */
+.btnWrap button {
+    width: 100%;
+    height: 40px;
+}

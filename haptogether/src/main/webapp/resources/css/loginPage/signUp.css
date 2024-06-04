@@ -1,0 +1,106 @@
+.warnArm {
+    font-size: 10px;
+    margin: 5px 10px;
+    @media (width >= 600px) {
+        font-size: 12px;
+    }
+}
+.signUpHeader {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+.signUpWrap {
+    border: 1px solid black;
+    /* min-width: 360px; */
+    /* max-width: 600px; */
+    padding: 20px 10px;
+}
+.idWrap,
+.pwWrap,
+.nicknameWrap,
+.emailWrap {
+    margin: 20px 0px;
+}
+.idHeader,
+.pwHeader,
+.nicknameHeader,
+.emailHeader {
+    font-weight: bold;
+    margin: 10px 0px;
+}
+
+input,
+select {
+    border: 1px solid #dadada;
+    width: 60%;
+    height: 40px;
+    margin: 5px 0px;
+    padding: 2px;
+}
+
+.emailWrap .emailFirst,
+.emailWrap .emailLast,
+.emailWrap select{
+    width: 20%;
+}
+
+.emailWrap select {
+    height: 46px;
+    width: 25%;
+}
+
+.signUpBtnWrap {
+    text-align: center;
+}
+
+button {
+    background-color: #8cb3d9; /* �⺻ ���� */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    /* transition-duration: 0.4s; */
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* hover ȿ�� */
+button:hover {
+    background-color: #6b96bd; /* hover �� ���� ��ȭ */
+}
+
+/* focus ȿ�� */
+button:active {
+    background-color: #a7c9e0; /* focus �� ���� ��ȭ */
+    outline: none;
+}
+
+#resetBtn {
+    background-color: #d98c8c; /* ������ �Ľ����� */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    /* transition-duration: 0.4s; */
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* hover ȿ�� */
+#resetBtn:hover {
+    background-color: #bd6b6b; /* hover �� ���� ��ȭ */
+}
+
+/* Ŭ�� ȿ�� */
+#resetBtn:active {
+    background-color: #9d5757; /* Ŭ�� �� ���� ��ȭ */
+}

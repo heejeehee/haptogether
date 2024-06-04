@@ -1,0 +1,28 @@
+/* nav 하단 */
+nav {
+    border: 1px solid red;
+    width:100%;
+    /* 하단고정 */
+    position: fixed;
+    bottom:0px;
+    
+    z-index: 10;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    margin: 0px;
+}
+nav ul li{
+    border: 1px solid black;
+    list-style: none;
+    width: 100%;    /* 각 넓이 설정 */
+    height: 100%;   /* 각 높이 설정 */
+    text-align: center; /* 글자 중앙정렬 */
+    padding:15px;
+    cursor: pointer;
+}
+nav ul li a{
+    text-decoration: none;
+}

@@ -1,0 +1,63 @@
+/* 하나를 더 감싸서 아래 리스트 식으로 정렬 */
+.forFlex {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-top: 10px;
+}
+
+/* 작성완료 버튼 div */
+.endWriteButtonWrap {
+    text-align: right;
+    margin: 20px 10px;
+}
+
+/* nameInput 제목 작성란 */
+.nameInputWrap {
+    margin: 20px 10px;
+}
+.nameInput {
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+/* textEditorWrap 텍스트상자 div */
+.textEditorWrap {
+    margin: 20px 10px;
+}
+
+/* setRoles 추가 div */
+.addRole {
+    display: flex;
+    justify-content: space-between;
+}
+
+.setRoles {
+    margin: 20px 10px;
+    border: 1px solid red;
+    background-color: #dadada;
+}
+.setRoles div {
+    margin: 10px 10px;
+    height: 25px;
+}
+/* 동적으로 추가되는 input, button */
+.role input {
+    padding: 0px 5px;
+    margin-right: 10px;
+    border: 1px solid black;
+    width: 80%;
+    height: 100%;
+}
+.role button {
+    padding: 0;
+    border: 1px solid black;
+    width: 10%;
+    height: 105%;
+}
+/* 인풋 옆에 버튼 정렬용 */
+.role div {
+    display: flex;
+    align-items: center;
+}

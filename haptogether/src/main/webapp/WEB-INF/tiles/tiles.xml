@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+  "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+	<!-- tiles 적용 -->
+	<definition name="baseLayout" template="/WEB-INF/views/layout/layout.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/layout/header.jsp" />
+		<put-attribute name="content" value="내용" />
+		<put-attribute name="nav" value="/WEB-INF/views/layout/nav.jsp" />
+	</definition>
+ 
+ 	<!-- 로그인 페이지 -->
+	<definition name="login" extends="baseLayout">
+		<put-attribute name="content" value="/WEB-INF/views/loginPage/loginPage.jsp" />
+	</definition>
+	
+	<!-- 로그인-회원가입 페이지 -->
+	<definition name="signUp" extends="baseLayout">
+		<put-attribute name="content" value="/WEB-INF/views/loginPage/signUp.jsp" />
+	</definition>
+	
+	<!-- 로그인-아이디 찾기 페이지 -->
+	<definition name="findId" extends="baseLayout">
+		<put-attribute name="content" value="/WEB-INF/views/loginPage/findId.jsp" />
+	</definition>
+	
+	<!-- 로그인-비밀번호 찾기 페이지 -->
+	<definition name="findPw" extends="baseLayout">
+		<put-attribute name="content" value="/WEB-INF/views/loginPage/findPw.jsp" />
+	</definition>
+	
+	<!-- 메인 페이지 -->
+	<definition name="main" extends="baseLayout">
+		<put-attribute name="content" value="/WEB-INF/views/mainPage/mainPage.jsp" />
+	</definition>
+	
+	<!-- 메인-검색 페이지 -->
+	<definition name="search" extends="baseLayout">
+		<put-attribute name="content" value="/WEB-INF/views/mainPage/searchPage.jsp" />
+	</definition>
+	
+	<!-- 메인-좋아요 리스트 페이지 -->
+	<definition name="loveList" extends="baseLayout">
+		<put-attribute name="content" value="/WEB-INF/views/mainPage/loveList.jsp" />
+	</definition>
+	
+	<!-- 메인-모집공고 작성 페이지 -->
+	<definition name="writeBoard" extends="baseLayout">
+		<put-attribute name="content" value="/WEB-INF/views/mainPage/writeBoard.jsp" />
+	</definition>
+	
+	<!-- 메인-모집공고 보기 페이지 -->
+	<definition name="showBoard" extends="baseLayout">
+		<put-attribute name="content" value="/WEB-INF/views/mainPage/showBoard.jsp" />
+	</definition>
+	
+	<!-- 프로필 페이지 -->
+	<definition name="myProfile" extends="baseLayout">
+		<put-attribute name="content" value="/WEB-INF/views/profilePage/myProfile.jsp" />
+	</definition>
+	
+	<!-- 프로필-프로젝트 신청현황 페이지 -->
+	<definition name="paStatus" extends="baseLayout">
+		<put-attribute name="content" value="/WEB-INF/views/profilePage/projectApplicationStatus.jsp" />
+	</definition>
+	
+	<!-- 프로필-내가 쓴 공고 페이지 -->
+	<definition name="projectWrited" extends="baseLayout">
+		<put-attribute name="content" value="/WEB-INF/views/profilePage/projectWrited.jsp" />
+	</definition>
+	
+	
+		
+	<!-- 타일즈 미 적용 -->
+<!-- 	<definition name="testPage" template="/WEB-INF/views/test.jsp"> -->
+<!-- 		<put-attribute name="testPage" value="" /> -->
+<!-- 	</definition> -->
+	
+</tiles-definitions>

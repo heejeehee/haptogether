@@ -1,0 +1,98 @@
+/* 버튼이랑 인풋 공통 */
+button {
+    background-color: #5495d7;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    /* transition-duration: 0.4s; */
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: #297bc8;
+}
+
+button:active {
+    background-color: #a7c9e0;
+    outline: none;
+}
+
+input {
+    border: 1px solid #dadada;
+    width: 50%;
+    height: 40px;
+    margin: 5px 0px;
+    padding: 2px;
+}
+
+/* 전체 감싸기 */
+.findPwWrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* 아이디 찾기 */
+.findPwHeader {
+    text-align: center;
+    margin: 10px 0px 20px 0px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 왼쪽 여백 */
+.findPwDetail {
+	margin-left: 10px;
+}
+
+/* 이메일 인증번호 발송 */
+.getNumberTxt {
+    margin-top: 30px;
+    /* 상단 여백 */
+}
+
+/* 인증번호 발송 구간 일렬정렬 */
+.for_align {
+    display: flex;
+}
+
+#sendNumber {
+    margin-left: 6px;
+}
+
+/* 각 질문유형 */
+.findPwTxt,
+.getNumberTxt {
+    font-size: 18px;
+}
+
+/* 문의하기 구간 */
+.findPwBtnWrap {
+    text-align: center;
+    margin-top: 50px;
+    border-top: 1px solid #dadada;
+}
+
+.findPwBtnWrap > div {
+    margin-top: 20px;
+}
+
+#inquireBtn {
+    background-color: #8fe07f;
+    margin-top: 10px;
+}
+
+#inquireBtn:hover {
+    background-color: #69e94f;
+}
+
+#inquireBtn:active {
+    background-color: #a9ee9b #666666;
+}
