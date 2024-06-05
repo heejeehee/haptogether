@@ -96,10 +96,16 @@
 		<put-attribute name="content" value="/WEB-INF/views/profilePage/doingProject.jsp" />
 	</definition>
 	
-	<!-- 프로필-진행중인 프로젝트 페이지 -->
+	<!-- 프로필-중단한 프로젝트 페이지 -->
 	<definition name="stopProject" extends="baseLayout">
 		<put-attribute name="title" value="중단한 프로젝트" />
 		<put-attribute name="content" value="/WEB-INF/views/profilePage/stopProject.jsp" />
+	</definition>
+	
+	<!-- 프로필-완료한 프로젝트 페이지 -->
+	<definition name="doneProject" extends="baseLayout">
+		<put-attribute name="title" value="완료한 프로젝트" />
+		<put-attribute name="content" value="/WEB-INF/views/profilePage/doneProject.jsp" />
 	</definition>
 	
 	

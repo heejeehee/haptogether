@@ -95,4 +95,10 @@ public class MainController {
 	public String stopProjectPage() {
 		return "stopProject";
 	}
+	
+	// 프로필 페이지 - 완료한 프로젝트
+	@RequestMapping("/profile/pageto/doneProject")
+	public String doneProjectPage() {
+		return "doneProject";
+	}
 }

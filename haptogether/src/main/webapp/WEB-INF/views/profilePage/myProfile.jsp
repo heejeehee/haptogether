@@ -48,7 +48,7 @@
                 <a href="/haptogether/profile/pageto/stopProject">중단한 프로젝트</a>
             </div>
             <div>
-                완료한 프로젝트
+                <a href="/haptogether/profile/pageto/doneProject">완료한 프로젝트</a>
             </div>
             <div>
                 내가 쓴 평가

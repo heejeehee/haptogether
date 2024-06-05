@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .detailWrap {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0px 15px;
+        box-sizing: border-box;
+    }
+
+    .detailHeader {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    /* 프로젝트 정보 구간 */
+    .projectWrap {
+        margin-bottom: 25px;
+    }
+    .projectName {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .projectInfo {
+        padding: 0px 5px;
+    }
+</style>
+<body>
+    <div class="detailWrap">
+        <div class="detailHeader">
+            내가 쓴 공고
+        </div>
+        <div class="projectWrap">
+            <div class="projectName">
+                프로젝트 제목
+            </div>
+            <div class="projectInfo">
+                프로젝트 내용
+            </div>
+        </div>
+
+        <div class="userEvaluateWrap">
+            <div class="userWrap">
+                <div class="roleAndbtn">
+                    <div class="userName">
+                        김박사
+                    </div>
+                    <div class="btnWrap">
+                        <button type="button">평가</button>
+                        <button type="button">긍정</button>
+                        <button type="button">부정</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="evaluateProjectWrap">
+            <div class="evaluatePersonWrap">
+                <div class="personName">
+                    김박사
+                </div>
+                <div class="personCmt">
+                    프로젝트 잘 하고 갑니다~
+                </div>
+            </div>
+        </div>
+        <div class="cmtArea">
+            <textarea placeholder="내용을 입력하세요."></textarea>
+            <button type="button">등록</button>
+        </div>
+    </div>
+</body>
+</html>
