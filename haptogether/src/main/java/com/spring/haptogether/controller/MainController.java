@@ -101,4 +101,10 @@ public class MainController {
 	public String doneProjectPage() {
 		return "doneProject";
 	}
+	
+	// 프로필 페이지 - 완료한 프로젝트 - 후기 작성 및 보기
+	@RequestMapping("/profile/pageto/doneProjectDetail")
+	public String doneProjectDetailPage() {
+		return "doneProjectDetail";
+	}
 }

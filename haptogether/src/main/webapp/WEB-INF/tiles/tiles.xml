@@ -108,6 +108,12 @@
 		<put-attribute name="content" value="/WEB-INF/views/profilePage/doneProject.jsp" />
 	</definition>
 	
+	<!-- 프로필-완료한 프로젝트-후기 작성 및 보기 페이지 -->
+	<definition name="doneProjectDetail" extends="baseLayout">
+		<put-attribute name="title" value="후기 작성 및 보기" />
+		<put-attribute name="content" value="/WEB-INF/views/profilePage/doneProjectDetail.jsp" />
+	</definition>
+	
 	
 		
 	<!-- 타일즈 미 적용 -->

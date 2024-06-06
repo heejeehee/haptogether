@@ -1,0 +1,138 @@
+.detailWrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px;
+    box-sizing: border-box;
+}
+
+.detailHeader {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* 프로젝트 정보 구간 */
+.projectWrap {
+    margin-bottom: 30px;
+}
+.projectName {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.projectInfo {
+    padding: 0px 5px;
+}
+
+/* 역할&평가 구간 */
+.userEvaluateWrap {
+    margin-bottom: 25px;
+    background-color: #eefaff;
+    padding: 10px;
+}
+
+.roleName {
+    margin-bottom: 5px;
+}
+
+.userSet {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.userName {
+    margin-left: 3px;
+}
+
+/* 평가, 긍정, 부정 버튼 */
+.btnWrap > button {
+    border: 0px;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+.btnEvaluate {
+    background-color: #555555;
+    color: #ffffff;
+}
+.btnEvaluate:hover {
+    background-color: #353535;
+}
+.btnEvaluate:active {
+    background-color: #acacac;
+}
+
+.btnGood {
+    background-color: #4de085;
+    color: #ffffff;
+}
+.btnGood:hover {
+    background-color: #1cdf67;
+}
+.btnGood:active {
+    background-color: #92e4b1;
+}
+
+.btnBad {
+    background-color: #fd4949;
+    color: #ffffff;
+}
+.btnBad:hover {
+    background-color: #ff1f1f;
+    color: #ffffff;
+}
+.btnBad:active {
+    background-color: #ff9d9d;
+    color: #ffffff;
+}
+
+/* 개인별 평가 textarea */
+.evalArea {
+    display: none;
+    margin-bottom: 15px;
+}
+.evalArea > textarea {
+    width: 85%;
+    height: 40px;
+    margin-right: 3px;
+}
+.evalArea > button {
+    width: 15%;
+}
+
+/* 전체 프로젝트 평가 구간 */
+.evaluateProjectWrap {
+    margin-bottom: 10px;
+    background-color: #fdf2e3;
+    padding: 10px;
+}
+
+.evaluatePersonWrap {
+    margin-bottom: 10px;
+}
+
+.personName {
+    margin-bottom: 5px;
+}
+
+.personCmt {
+    margin-left: 3px;
+}
+
+/* 댓글 작성 구간 */
+.cmtArea {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.cmtArea > textarea {
+    width: 80%;
+    height: 70px;
+    margin-right: 5px;
+}
+.cmtArea > button {
+    width: 20%;
+}

@@ -38,6 +38,8 @@
     /* 역할&평가 구간 */
     .userEvaluateWrap {
         margin-bottom: 25px;
+        background-color: #eefaff;
+        padding: 10px;
     }
 
     .roleName {
@@ -47,13 +49,76 @@
     .userSet {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
     }
 
-    
+    .userName {
+        margin-left: 3px;
+    }
+
+    /* 평가, 긍정, 부정 버튼 */
+    .btnWrap > button {
+        border: 0px;
+        padding: 4px 8px;
+        border-radius: 4px;
+    }
+    .btnEvaluate {
+        background-color: #555555;
+        color: #ffffff;
+    }
+    .btnEvaluate:hover {
+        background-color: #353535;
+    }
+    .btnEvaluate:active {
+        background-color: #acacac;
+    }
+
+    .btnGood {
+        background-color: #4de085;
+        color: #ffffff;
+    }
+    .btnGood:hover {
+        background-color: #1cdf67;
+    }
+    .btnGood:active {
+        background-color: #92e4b1;
+    }
+
+    .btnBad {
+        background-color: #fd4949;
+        color: #ffffff;
+    }
+    .btnBad:hover {
+        background-color: #ff1f1f;
+        color: #ffffff;
+    }
+    .btnBad:active {
+        background-color: #ff9d9d;
+        color: #ffffff;
+    }
+
+    /* 개인별 평가 textarea */
+    .evalArea {
+        display: none;
+        margin-bottom: 15px;
+    }
+    .evalArea > textarea {
+        width: 85%;
+        height: 40px;
+        margin-right: 3px;
+    }
+    .evalArea > button {
+        width: 15%;
+    }
 
     /* 전체 프로젝트 평가 구간 */
     .evaluateProjectWrap {
+        margin-bottom: 10px;
+        background-color: #fdf2e3;
+        padding: 10px;
+    }
+
+    .evaluatePersonWrap {
         margin-bottom: 10px;
     }
 
@@ -61,9 +126,14 @@
         margin-bottom: 5px;
     }
 
+    .personCmt {
+        margin-left: 3px;
+    }
+
     /* 댓글 작성 구간 */
     .cmtArea {
         display: flex;
+        margin-bottom: 20px;
     }
 
     .cmtArea > textarea {
@@ -75,6 +145,19 @@
         width: 20%;
     }
 </style>
+<script>
+    // 개인평가작성 부분
+    window.addEventListener("load", () => {
+        document.querySelectorAll(".btnEvaluate").forEach(function(btnEval){
+            btnEval.addEventListener("click", function(e) {
+                console.log(e.target.parentNode.parentNode.parentNode)
+                let roleAndbtn = e.target.parentNode.parentNode.parentNode
+                // 이미 평가를 작성했다면 뭔가 조치를 취해야 할듯?
+                roleAndbtn.querySelector(".evalArea").style.display = "flex"
+            })
+        })
+    })
+</script>
 <body>
     <div class="detailWrap">
         <div class="detailHeader">
@@ -104,6 +187,10 @@
                             <button type="button" class="btnGood">긍정</button>
                             <button type="button" class="btnBad">부정</button>
                         </div>
+                    </div>
+                    <div class="evalArea">
+                        <textarea placeholder="내용을 입력하세요."></textarea>
+                        <button type="button">평가<br>작성</button>
                     </div>
                 </div>
             </div>
@@ -136,7 +223,17 @@
                     프로젝트 잘 하고 갑니다~
                 </div>
             </div>
+
+            <div class="evaluatePersonWrap">
+                <div class="personName">
+                    홍박사
+                </div>
+                <div class="personCmt">
+                    재밌게 하고 가요~
+                </div>
+            </div>
         </div>
+
         <div class="cmtArea">
             <textarea placeholder="내용을 입력하세요."></textarea>
             <button type="button">등록</button>
