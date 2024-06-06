@@ -24,7 +24,7 @@
 
     /* 프로젝트 정보 구간 */
     .projectWrap {
-        margin-bottom: 25px;
+        margin-bottom: 30px;
     }
     .projectName {
         font-size: 18px;
@@ -34,11 +34,51 @@
     .projectInfo {
         padding: 0px 5px;
     }
+
+    /* 역할&평가 구간 */
+    .userEvaluateWrap {
+        margin-bottom: 25px;
+    }
+
+    .roleName {
+        margin-bottom: 5px;
+    }
+
+    .userSet {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+
+    
+
+    /* 전체 프로젝트 평가 구간 */
+    .evaluateProjectWrap {
+        margin-bottom: 10px;
+    }
+
+    .personName {
+        margin-bottom: 5px;
+    }
+
+    /* 댓글 작성 구간 */
+    .cmtArea {
+        display: flex;
+    }
+
+    .cmtArea > textarea {
+        width: 80%;
+        height: 70px;
+        margin-right: 5px;
+    }
+    .cmtArea > button {
+        width: 20%;
+    }
 </style>
 <body>
     <div class="detailWrap">
         <div class="detailHeader">
-            내가 쓴 공고
+            후기 작성 및 보기
         </div>
         <div class="projectWrap">
             <div class="projectName">
@@ -52,13 +92,36 @@
         <div class="userEvaluateWrap">
             <div class="userWrap">
                 <div class="roleAndbtn">
-                    <div class="userName">
-                        김박사
+                    <div class="roleName">
+                        1번 역할
                     </div>
-                    <div class="btnWrap">
-                        <button type="button">평가</button>
-                        <button type="button">긍정</button>
-                        <button type="button">부정</button>
+                    <div class="userSet">
+                        <div class="userName">
+                            김박사
+                        </div>
+                        <div class="btnWrap">
+                            <button type="button" class="btnEvaluate">평가</button>
+                            <button type="button" class="btnGood">긍정</button>
+                            <button type="button" class="btnBad">부정</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="userWrap">
+                <div class="roleAndbtn">
+                    <div class="roleName">
+                        2번 역할
+                    </div>
+                    <div class="userSet">
+                        <div class="userName">
+                            홍박사
+                        </div>
+                        <div class="btnWrap">
+                            <button type="button" class="btnEvaluate">평가</button>
+                            <button type="button" class="btnGood">긍정</button>
+                            <button type="button" class="btnBad">부정</button>
+                        </div>
                     </div>
                 </div>
             </div>
